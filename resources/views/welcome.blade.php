@@ -53,7 +53,7 @@
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm"><br>
                                     Your short link is:
-                                    <a href=<?= $url ?>><?= $url ?></a><br><br>
+                                    <a target=”_blank” href=<?= $url ?>><?= $url ?></a><br><br>
                                 </div>
                             </div>
                         </div>

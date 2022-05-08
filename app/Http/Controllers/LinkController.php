@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Link;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\URL;
 
 class LinkController extends Controller
 {
@@ -23,7 +24,7 @@ class LinkController extends Controller
             'target' => $data['target'],
             'identifier' =>  $random
         ]);
-        $url = config('app.url') . "/red/" . $random;
+        $url = URL::current() . "/red/" . $random;
         return view('welcome', compact('url'));
     }
 
